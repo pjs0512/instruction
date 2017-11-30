@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .koumoku{
+        font-size: 18px;
+        background-color: burlywood;
+    }
+</style>
+<body>
+<script>
+    function HttpRequest() { // Ajax
+        var url = "http://localhost/0721DB/dbs.php?";
+        var xml = new XMLHttpRequest();
+        var paramiter = "type=";
+        xml.open("POST", url, true); // POST 방식
+        xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //헤더에 부착
+        xml.onreadystatechange = function () {
+            if (xml.readyState == 4 && xml.status == 200) {
+               var resValue = xml.responseText;
+                    }
+            };
+        xml.send(paramiter);
+        }
+
+</script>
+<input type="button" onclick="HttpRequest(1)" value="기본값 보기">
+<input type="button" onclick="HttpRequest(2)" value="테이블에 CA 추가">
+<input type="button" onclick="HttpRequest(3)" value="알고리즘 적용 테이블 출력">
+<input type="button" onclick="HttpRequest(4)" value="알고리즘 적용">
+<table id = "prt" border="1" width="500">
+
+</table>
+</body>
+</html>
