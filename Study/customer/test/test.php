@@ -39,5 +39,19 @@ foreach ($record_3 as $value){
 
 $test->free();*/
 
-$value = $test->fetch_all(MYSQLI_ASSOC);
-var_dump($value);
+/*$value = $test->fetch_all(MYSQLI_ASSOC);
+var_dump($value);*/
+/*class customer_info{
+    function hello(){
+        return $this->age + $this->level;
+    }
+}
+
+$obj = $test->fetch_object('customer_info');
+
+foreach ($obj as $key=>$value) {
+    echo "$key : $value<br>";
+}
+echo $obj->hello();*/
+
+?>
